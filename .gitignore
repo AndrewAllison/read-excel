@@ -1,0 +1,22 @@
+node_modules
+# Keep environment variables out of version control
+.env
+.env.*
+
+# IDE
+.idea/
+
+# Dist
+dist/
+
+# coverage
+coverage
+
+# documentation
+documentation
+
+# ignore any temp documents
+temp
+# DOn't want to end up with loads of files here they should be temp and move to the cloud asap
+/src/ingestion/scrape/images/
+/src/ingestion/oscr/extracts/
