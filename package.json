@@ -1,15 +1,19 @@
 {
   "name": "read-excel",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Source code used in my [Medium Article](https://medium.com/@andrewallison/a-simple-project-with-typescript-nodejs-85e48616b1)",
+  "main": "src/index.ts",
   "scripts": {
     "eslint": "eslint src/** --fix",
     "start": "ts-node src/index.ts"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": ["ExcelJs", "Tutorial", "Medium-Article"],
+  "author": "Andrew Allison<andrew.allison@digitalinfamy.com>",
   "license": "ISC",
+  "dependencies": {
+    "csvtojson": "^2.0.10",
+    "exceljs": "^4.3.0"
+  },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^5.44.0",
     "commitizen": "^4.2.5",
