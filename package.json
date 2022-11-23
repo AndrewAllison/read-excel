@@ -1,13 +1,21 @@
 {
   "name": "read-excel",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Source code used in my [Medium Article](https://medium.com/@andrewallison/a-simple-project-with-typescript-nodejs-85e48616b1)",
   "main": "src/index.ts",
   "scripts": {
     "eslint": "eslint src/** --fix",
-    "start": "ts-node src/index.ts"
+    "start": "ts-node src/index.ts",
+    "release": "standard-version --no-verify",
+    "post:release": "npm run release:github && npm run release:tags",
+    "release:github": "dotenv -e .env -- conventional-github-releaser -p conventionalcommits"
   },
-  "keywords": ["ExcelJs", "Tutorial", "Medium-Article"],
+  "keywords": [
+    "ExcelJs",
+    "Tutorial",
+    "Medium-Article",
+    "Learning By Doing"
+  ],
   "author": "Andrew Allison<andrew.allison@digitalinfamy.com>",
   "license": "ISC",
   "dependencies": {
@@ -18,10 +26,13 @@
     "@typescript-eslint/eslint-plugin": "^5.44.0",
     "commitizen": "^4.2.5",
     "commitlint": "^17.3.0",
+    "conventional-github-releaser": "^3.1.5",
     "cz-conventional-changelog": "^3.3.0",
+    "dotenv-cli": "^6.0.0",
     "eslint": "^8.28.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-prettier": "^4.2.1",
+    "standard-version": "^9.5.0",
     "ts-node": "^10.9.1"
   },
   "config": {
